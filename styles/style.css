@@ -1,0 +1,405 @@
+body{
+    background-color: #eae4e9;
+    text-align: center;
+}
+
+/* ---------- Game board ---------- */
+.container1{
+    z-index: 1;
+    display: flex;
+    height: 50rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.screen{
+    width: 20rem;
+    margin: auto;
+    background-color: #fff1e6;
+    padding: 10%;
+    padding-left: 14%;
+    padding-right: 14%;
+    border: 0.15rem solid #e78f8e;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .screen{
+        padding: 1rem;
+    }
+    
+    .line4, .line5{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+h1{
+    color: #e78f8e;
+    font-family: 'Bungee', cursive;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3rem;
+    
+}
+
+.title{
+    margin-bottom: 3rem;
+}
+
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.line1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.line2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.line3{
+    display: flex;
+    justify-content: space-around;
+}
+
+.square{
+    margin: 0.2rem;
+    background-color: #acd8aa;
+    width: 6rem;
+    height: 6rem;
+    border: 0.15rem solid #e78f8e;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winnerSquare{
+    background-color: #93b991;
+    transform: scale(1.25);
+    transition: ease-in-out 200ms;
+}
+
+.o{
+    display: flex;
+}
+
+.o:after{
+    content: " "; /* after always needs content */
+    width: 4.5rem;
+    height: 3.5rem;
+    background-image: url("../images/watermelon.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.x{
+    display: flex;
+}
+
+.x:after{
+    content: " "; /* after always needs content */
+    width: 2.2rem;
+    height: 4.5rem;
+    background-image: url("../images/pineapple.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pointCount{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.6rem;
+    width: 15rem;
+    background-color: #fff1e6;
+    border-bottom: 0.15rem solid #e78f8e;
+    border-left: 0.15rem solid #e78f8e;
+    border-bottom-left-radius: 1rem;
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    color: #e78f8e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pointCount>p:nth-child(1){
+    margin: 0.3rem;
+    font-size: 1rem;
+}
+
+.pointCount>p{
+    margin: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.player1{
+    display: flex;
+}
+
+.player2{
+    display: flex;
+}
+
+.player1::before{
+    content: " ";
+    width: 1.1rem;
+    height: 1rem;
+    transform: translateX(-15%);
+    background-image: url("../images/watermelon.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.player2::before{
+    content: " ";
+    width: 1rem;
+    height: 1.2rem;
+    background-image: url("../images/pineapple.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-20%);
+}
+
+/* ---------- Intro page ---------- */
+.introPage{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.459);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.container2{
+    width: 100%;
+    margin: 5%;
+    background-color: #acd8aad8;
+    padding: 10%;
+    border: 0.15rem solid #e78f8e;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line4{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol1::before{
+    content: " ";
+    width: 1.8rem;
+    height: 2rem;
+    transform: translateX(-15%);
+    background-image: url("../images/watermelon.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.line5{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol2::before{
+    content: " ";
+    width: 1.2rem;
+    height: 1.85rem;
+    transform: translateY(-10%);
+    transform: translateX(-5%);
+    background-image: url("../images/pineapple.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+input{
+    margin: 0.5rem;
+    padding: 1%;
+    border: 0.15rem solid #e78f8e;
+    border-radius: 1rem;
+    background-color: #fae7d8;
+    color: #e78f8e;
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    width: 50%;
+}
+
+.start{
+    width: 30%;
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.04);
+    transition: ease-in-out 200ms;
+}   
+
+p{
+    display: inline-flex;
+    color: #e78f8e;
+    font-family: 'Bungee', cursive;
+    font-size: 1.5rem;
+}
+
+/* ---------- Player's turn pop up ---------- */
+.turnTeller{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+
+.container5{
+    background-color: #acd8aad8;
+    padding: 10%;
+    border: 0.15rem solid #e78f8e;
+    border-radius: 1rem;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.turn{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.turnMessage0::before{
+    content: " ";
+    width: 3rem;
+    height: 2.2rem;
+    transform: translateY(-15%);
+    background-image: url("../images/watermelon.png");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.turnMessage1::before{
+    content: " ";
+    width: 1.5rem;
+    height: 3rem;
+    transform: translate(-30%, -30%);
+    background-image: url("../images/pineapple.png");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.turnMessage1{
+    transform: translateY(30%);
+}
+
+/* ---------- Game over pop up ---------- */
+.finishPage{
+    z-index: 1;
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+
+.container3{
+    background-color: #acd8aad8;
+    padding: 5%;
+    border: 0.15rem solid #e78f8e;
+    border-radius: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameOver{
+    margin: 0;
+}
+
+.icon1.icon2{
+    display: inline-flex;
+}
+
+.icon1::before{
+    content: " ";
+    width: 3rem;
+    height: 2rem;
+    background-image: url("../images/watermelon.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon2::before{
+    content: " ";
+    width: 1.5rem;
+    height: 2.5rem;
+    background-image: url("../images/pineapple.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-10%, -25%);
+}
+
+.playAgain{
+    padding: 3%;
+    width: 70%
+}
+
+.tiedPage{
+    z-index: 1;
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+
+.container4{
+    background-color: #acd8aad8;
+    padding: 8%;
+    border: 0.15rem solid #e78f8e;
+    border-radius: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameTied{
+    margin-bottom: 2rem;
+}

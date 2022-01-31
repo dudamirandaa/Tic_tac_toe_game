@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <!-- ---------- Game board ---------- -->
+    <div class="container1">
+
+        <div class="screen">
+
+            <h1 class="title">Tic Tac Toe</h1>
+
+            <div class="board">
+
+                <div class="line1">
+                    <div class="square" id="0"></div>
+                    <div class="square" id="1"></div>
+                    <div class="square" id="2"></div>
+                </div>
+                <div class="line2">
+                    <div class="square" id="3"></div>
+                    <div class="square" id="4"></div>
+                    <div class="square" id="5"></div>
+                </div>
+                <div class="line3">
+                    <div class="square" id="6"></div>
+                    <div class="square" id="7"></div>
+                    <div class="square" id="8"></div>
+                </div>
+
+                <div class="pointCount">
+                    <p>Pontuação</p>
+                    <p class="player1"></p>
+                    <p class="player2"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ---------- Intro page ---------- -->
+    <div class="introPage">
+        <div class="container2">
+            
+            <h1>Tic tac toe</h1>
+
+            <h1 class="intro">Quem irá jogar?</h1>
+
+            <div class="form">
+
+                <div class="line4">
+                    <p class="symbol1">Jogador 1:</p>
+                    <input type="text" name="jogador1" class="input1" maxlength="10">
+                </div>
+                
+                <div class="line5">
+                    <p class="symbol2">Jogador 2:</p>
+                    <input type="text" name="jogador2" class="input2" maxlength="10">
+                </div>
+
+                <input type="submit" value="START" class="start">
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ---------- Game over pop up ---------- -->
+    <div class="finishPage">
+        <div class="container3">
+            <h1 class="gameOver">Game over!</h1>
+            <p class="winner"></p>
+            <input type="submit" value="JOGAR NOVAMENTE" class="playAgain">
+        </div>
+    </div>
+
+    <!-- ---------- Tied game pop up ---------- -->
+    <div class="tiedPage">
+        <div class="container4">
+            <h1 class="gameTied">Deu velha!</h1>
+            <input type="submit" value="JOGAR NOVAMENTE" class="playAgainTied">
+        </div>
+    </div>
+
+    <!-- ---------- Player's turn pop up ---------- -->
+    <div class="turnTeller">
+        <div class="container5">
+            <p class="turn"></p>
+        </div>
+    </div>
+
+    <script src="scripts/game.js"></script>
+    <script src="scripts/interaction.js"></script>
+</body>
+</html>
