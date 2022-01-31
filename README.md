@@ -11,11 +11,19 @@ Features in this game:
 
 Pictures:
 
+First page:
+
 ![Start](screenshots/start.png)
+
+Game over page:
 
 ![Game over](screenshots/game_over.png)
 
+Game tied page:
+
 ![Turn](screenshots/game_tied.png)
+
+Player's turn page:
 
 ![Tied game](screenshots/player_turn.png)
 
