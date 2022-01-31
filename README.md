@@ -10,9 +10,13 @@ Features in this game:
 - Point counter that informs how many points each player has scored.
 
 Pictures:
+
 ![Start](screenshots/start.png)
+
 ![Game over](screenshots/game_over.png)
+
 ![Turn](screenshots/game_tied.png)
+
 ![Tied game](screenshots/player_turn.png)
 
 
